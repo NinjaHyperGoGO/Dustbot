@@ -14,7 +14,7 @@ exports.run = (client, message, params) => {
     .setColor(0x00AE86)
     .setTimestamp()
     .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('Özel mesajlarını kontrol et knk. :postbox:');
+    .setDescription('Özel mesajlarını kontrol et. :postbox:');
     message.channel.sendEmbed(ozelmesajkontrol) }
   } else {
     let command = params[0];
@@ -34,7 +34,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'help',
+  name: 'yardım',
   description: 'Tüm komutları gösterir.',
-  usage: 'yardım [komut]'
+  usage: 'yardım'
 };

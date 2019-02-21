@@ -3,10 +3,12 @@ const client = new Discord.Client();
 const ayarlar = require('./ayarlar.json');
 const chalk = require('chalk');
 const fs = require('fs');
+const db = require('quick.db');
 const moment = require('moment');
 require('./util/eventLoader')(client);
 
 var prefix = ayarlar.prefix;
+
 
 const log = message => {
   console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
@@ -80,7 +82,7 @@ client.unload = command => {
 
 client.on('message', msg => {
   if (msg.content.toLowerCase() === 'sa') {
-    msg.reply('Aleyküm selam,  hoş geldin ^^');
+    msg.reply('Aleyküm selam,  hoş geldin');
   }
 });
 
@@ -95,9 +97,9 @@ client.elevation = message => {
 };
 
 var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
-// client.on('debug', e => {
-//   console.log(chalk.bgBlue.green(e.replace(regToken, 'that was redacted')));
-// });
+client.on('debug', e => {
+ console.log(chalk.bgBlue.green(e.replace(regToken, 'that was redacted')));
+ });
 
 client.on('warn', e => {
   console.log(chalk.bgYellow(e.replace(regToken, 'that was redacted')));

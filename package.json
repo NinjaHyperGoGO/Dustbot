@@ -1,25 +1,14 @@
 {
-  "name": "taklabot",
-  "version": "1.0.1",
-  "description": "A boilerplate example bot with command handler and reloadable commands. Updated and Maintained by the Idiot's Guide Community",
-  "main": "node bot.js",
+  "//1": "describes your app and its dependencies",
+  "//2": "https://docs.npmjs.com/files/package.json",
+  "//3": "updating this file will download and update your packages",
+  "name": "hello-express",
+  "version": "0.0.1",
+  "description": "A simple Node app built on Express, instantly up and running.",
+  "main": "bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node bot.js"
   },
-  "engines": {
-    "node": "8.4.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/An-Idiots-Guide/guidebot.git"
-  },
-  "author": "The Idiot's Guide Community",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/An-Idiots-Guide/guidebot/issues"
-  },
-  "homepage": "https://github.com/An-Idiots-Guide/guidebot#readme",
   "dependencies": {
     "alex": "^6.0.0",
     "array-sort": "^1.0.0",
@@ -93,7 +82,7 @@
     "mongoose": "^5.4.0",
     "my-google-news": "^3.0.0",
     "newsapi": "^2.4.0",
-    "node": "^10.8.0",
+    "node": "^11.10.0",
     "node-fetch-polyfill": "^2.0.6",
     "node-google-translate-skidz": "^1.1.2",
     "node-superfetch": "^0.1.9",
@@ -139,5 +128,17 @@
     "ytdl-core": "^0.21.1",
     "ytpl": "^0.1.14",
     "ytsearcher": "^1.2.0"
-  }
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/hello-express"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
 }
